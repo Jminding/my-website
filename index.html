@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <!--Replace with your tailwind.css once created-->
     <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.17.0/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="styles.css">
 
     <style>
@@ -22,7 +23,7 @@
     </style>
   </head>
 
-  <body class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed" style="background-image: url('header.png');">
+  <body class="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed" style="background-image: url('header.png');">
     <div class="h-full">
       <!--Nav-->
       <div class="w-full container mx-auto">
@@ -32,10 +33,10 @@
           </a>
 
           <div class="flex w-1/2 justify-end content-center">
-            <a class="inline-block text-blue-300 no-underline hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out" href="https://github.com/Jminding">
+            <a class="inline-block text-blue-300 no-underline hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out" href="https://github.com/Jminding" target="_blank" rel="noreferrer noopener">
               <svg aria-hidden="true" role="img" class="octicon octicon-mark-github" viewBox="0 0 16 16" width="32" height="32" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
             </a>
-            <a class="inline-block text-blue-300 no-underline hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out" href="https://www.linkedin.com/in/jaymin-ding/">
+            <a class="inline-block text-blue-300 no-underline hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out" href="https://www.linkedin.com/in/jaymin-ding/" target="_blank" rel="noreferrer noopener">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="37" height="37">
                 <path fill-rule="evenodd" d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" fill="#93C5FD"></path>
               </svg>
@@ -63,24 +64,32 @@
           </p>
 
           <!--TODO: Make the button actually send the message to my email-->
-          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4" method="POST" action="contact.php">
             <div class="mb-4">
               <label class="block text-blue-300 py-2 font-bold mb-2" for="emailaddress">
                 Contact me! (This doesn't work yet)
               </label>
               <input
                 class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                id="name"
+                type="text"
+                placeholder="First Last"
+                name="name"
+              />
+              <input
+                class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
                 id="emailaddress"
                 type="text"
                 placeholder="you@somewhere.com"
+                name="email"
               />
-              <textarea class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out" placeholder="Got something to say? Put it here!"></textarea>
+              <textarea name="message" class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out" placeholder="Got something to say? Put it here!"></textarea>
             </div>
 
             <div class="flex items-center justify-between pt-4">
               <button
                 class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                type="button">
+                type="submit">
                 Send
               </button>
             </div>
@@ -94,12 +103,13 @@
 
         <div class="mx-auto md:pt-16">
           <p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center">
-            Take a look at my projects
+            See more about me!
           </p>
           <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
             <!-- <img src="App Store.svg" class="h-12 pr-12 transform hover:scale-125 duration-300 ease-in-out" /> -->
             <!-- <button class="btn">e</button> -->
-            <a class="github-button">View on GitHub</a>
+            <a href="about.html"><button class="btn">About Me</button></a><pre> </pre>
+            <a href="https://github.com/Jminding" target="_blank" rel="noreferrer noopener"><button class="btn">View on GitHub</button></a>
             <!-- <a class="nav-link" href="https://github.com/Jminding" ><span class="d-none d-sm-inline">View on GitHub </span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-mark-github" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></a> -->
             <!-- <img src="Play Store.svg" class="h-12 transform hover:scale-125 duration-300 ease-in-out" /> -->
           </div>
@@ -113,5 +123,14 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script language="JavaScript">
+      // Code for validating the form
+      // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+      // for details
+      var frmvalidator  = new Validator("contactform");
+      frmvalidator.addValidation("name","req","Please provide your name"); 
+      frmvalidator.addValidation("email","req","Please provide your email"); 
+      frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+      </script>
   </body>
 </html>
