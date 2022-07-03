@@ -15,3 +15,5 @@
 .css-button:hover {
 	background-color: #2b2b2b;
 }
+
+li:before { content: '→'; margin-right: 10px; } 
