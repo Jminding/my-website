@@ -23,7 +23,7 @@
     </style>
   </head>
 
-  <body class="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed" style="background-image: url('header.png');">
+  <body class="leading-normal tracking-normal text-indigo-400 bg-cover" style="background-image: url('header.png');">
     <div class="h-full">
       <!--Nav-->
       <div class="w-full container mx-auto">
@@ -77,7 +77,7 @@
         <!--Right Col-->
         <div class="w-full xl:w-3/5 p-12 overflow-hidden">
           <!--TODO: Make the button actually send the message to my email-->
-          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4" method="POST" action="contact.php">
+          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4" action="https://formsubmit.co/jtding43@gmail.com" method="POST">
             <div class="mb-4">
               <label class="block text-blue-300 py-2 font-bold mb-2" for="emailaddress">
                 Contact me! (This doesn't work yet)
@@ -92,7 +92,7 @@
               <input
                 class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
                 id="emailaddress"
-                type="text"
+                type="email"
                 placeholder="you@somewhere.com"
                 name="email"
               />
