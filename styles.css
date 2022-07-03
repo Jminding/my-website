@@ -1,19 +1,14 @@
-.css-button {
-	font-family: Arial;
-	color: #FFFFFF;
-	font-size: 16px;
-	border-radius: 5px;
-	border: 0px #000000 solid;
-	padding: 14px 18px;
-	background-color: #000000;
-	text-shadow: 1px 1px 1px #528ecc;
-	box-shadow: inset 1px 1px 2px 0px #000000;
-	cursor: pointer;
-	display: inline-flex;
-	align-items: center;
-}
-.css-button:hover {
-	background-color: #2b2b2b;
-}
-
 li:before { content: '→'; margin-right: 10px; } 
+#caption {
+	text-align: center;
+	color: white;
+}
+center {
+	border: 0px;
+}
+spacer {
+	display: none;
+}
+.new {
+	display: none;
+}
