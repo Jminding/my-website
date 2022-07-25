@@ -1,0 +1,674 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Jaymin Ding</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.15;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 0.8;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.1em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+	margin-top: 1.2rem;
+}
+
+h3 {
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+p {
+	font-size: 0.85rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+	font-size: 0.85rem;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: none;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 0.85em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="67760a0c-908b-479c-abe9-7cf577c67947" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1655720031554-a929595ffad7?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy" style="object-position:center 50%"/><h1 class="page-title" style="text-align: center;">Jaymin Ding</h1></header><div class="page-body"><p id="03e8c149-6c87-4547-be7c-d2a5aa56e8d8" class="" style="text-align: center;">🏠 <a href="https://jay-ding.pages.dev">https://jay-ding.pages.dev</a> | 📧 jtding43@gmail.com | 📱+1 (917) 975-4791 | <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg> <a href="https://github.com/Jminding">Jminding</a> | <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <a href="www.linkedin.com/in/jaymin-ding">Jaymin Ding</a></p><h2 id="599cdfbb-268a-4bfd-9dbf-1b54b043dcab" class=""><mark class="highlight-blue">Summary</mark></h2><blockquote id="70472bec-b0c9-48a2-8f79-8005168c533a" class="">I’m a programmer and highly motivated student that uses technology to solve real-world problems. I’m really enthusiastic to help my peers and make learning a fun experience!</blockquote><hr id="c818bee6-c8b9-427c-86b2-cb4000a8628b"/><h2 id="225eb9ad-725d-462c-b270-5518d4376743" class=""><mark class="highlight-blue">Honors &amp; Awards</mark></h2><a href="https://congressionalappchallenge.us/20-nj09" target="_blank" rel="noreferrer noopener"><h3 id="5a88d8fa-0dd8-4cec-af39-279a3942453c" class="">Winner of 2020 Congressional App Challenge</h3></a><p id="4f2922b6-2c18-4c88-9b45-156ae4b18392" class=""><mark class="highlight-gray"><em><strong>CloudHanger</strong></em></mark><mark class="highlight-gray"><em>,</em></mark><mark class="highlight-gray"><em><strong> </strong></em></mark><mark class="highlight-gray"><em>9th Congressional District of New Jersey</em></mark><em> –</em><mark class="highlight-gray"><em><strong> 2020</strong></em></mark></p><p id="293bf9ab-fc20-45bc-8191-80c374154a61" class="">Created CloudHanger, an app that streamlines dry cleaning by providing online, contactless service. Won 1st place in the 2020 Congressional App Challenge in the 9th Congressional District of New Jersey.</p><a href="https://cdn.upload.systems/uploads/9HPB8NGh.png" target="_blank" rel="noreferrer noopener"><h3 id="91226fa3-908e-4d85-8d66-8f7719177a03" class="">Nominated for Inspirit AI Leadership Fellow</h3></a><p id="221ef165-0391-4ff6-8206-735c64def885" class=""><mark class="highlight-gray"><em><strong>Inspirit AI Ambassadors Program</strong></em></mark><em> –</em><mark class="highlight-gray"><em><strong> 2021</strong></em></mark></p><ul id="65f860be-ccf9-4aee-b2fb-758eff7de7bb" class="bulleted-list"><li style="list-style-type:disc">Fulfilled requirements at Inspirit AI to become an “Artificial Intelligence Leadership Fellow, awarded to the best-performing high school student leaders globally.”</li></ul><h3 id="e0b9cb91-9e7e-4dd2-9497-2421748a1bc5" class="">Awarded West Point STEM Ambassador</h3><p id="6fd2b890-c027-44f2-87c2-0b389772f90d" class=""><mark class="highlight-gray"><em><strong>Center for Leadership and Diversity in STEM</strong></em></mark><mark class="highlight-gray"><em>,</em></mark><mark class="highlight-gray"></mark><mark class="highlight-gray"><em>United States Military Academy, West Point</em></mark><em> –</em><mark class="highlight-gray"><em><strong> 2022</strong></em></mark></p><ul id="bfd133a0-52ef-40c5-a8ac-b61c752e0960" class="bulleted-list"><li style="list-style-type:disc">Won the West Point STEM Ambassador award</li></ul><ul id="cfe731ad-3581-4cbe-ba8d-1e9fa0e52d98" class="bulleted-list"><li style="list-style-type:disc">Highest award possible for students at the Center for Leadership and Diversity in STEM Camp</li></ul><a href="https://courses.edx.org/certificates/f7957c974dbb4fda966a21e28a38f18d"><h3 id="a3549a1b-f40c-48df-a7ab-0c052e4187b4" class="" target="_blank" rel="noreferrer noopener">Google AI for JavaScript Developers with Tensorflow.js</h3></a><p id="6d2aa2a4-fc6e-45fa-89ba-33c15e72dc6d" class=""><mark class="highlight-gray"><em><strong>Google</strong></em></mark><mark class="highlight-gray"><em>,</em></mark><mark class="highlight-gray"><em><strong> </strong></em></mark><mark class="highlight-gray"><em>edX</em></mark><em> –</em><mark class="highlight-gray"><em><strong> 2022</strong></em></mark></p><ul id="830da307-bacf-4083-8c68-d09bb51bd2a7" class="bulleted-list"><li style="list-style-type:disc">Completed the course <em>Google AI for JavaScript Developers with Tensorflow.js</em> by Jason Mayes from Google</li></ul><a href="https://courses.edx.org/certificates/7ec2566842814bb9aa4c8d691991560c" target="_blank" rel="noreferrer noopener"><h3 id="8f88752f-3eff-4b04-8a4c-cc717f577035" class="">Data Science: R Basics</h3></a><p id="2b688b70-cf14-4b94-b9d1-42f7d91bc3fd" class=""><mark class="highlight-gray"><em><strong>HarvardX</strong></em></mark><mark class="highlight-gray"><em>,</em></mark><mark class="highlight-gray"><em><strong> </strong></em></mark><mark class="highlight-gray"><em>edX</em></mark><em> –</em><mark class="highlight-gray"><em><strong> 2022</strong></em></mark></p><ul id="30d3173b-0ea8-4f28-b931-07e126d23992" class="bulleted-list"><li style="list-style-type:disc">Learned the basics of the R language from HarvardX.</li></ul><hr id="72738dd3-d710-458c-97a9-751062133249"/><h2 id="52910e8d-25c7-4ecb-a332-0e2a36512f16" class=""><mark class="highlight-blue">👨🏻‍💻 STEM/Programming Experience</mark></h2><h3 id="c61f296b-db46-4081-bdc7-b71d6ab54d7e" class="">Big Data, Machine Learning, and their Real World Applications</h3><p id="a530a043-1937-41c0-90db-3a5b36057d63" class="block-color-gray"><em><strong>Columbia University</strong></em><em>, New York City – <strong>Jun.-Jul. 2022</strong></em></p><ul id="4ad311f8-30d3-4e0f-8310-f160fbd281cc" class="bulleted-list"><li style="list-style-type:disc">Participated in hands-on real-world machine learning and AI case studies</li></ul><ul id="be755f93-04b2-4248-be26-06514d76e350" class="bulleted-list"><li style="list-style-type:disc">Final Project: Dynamic Visualization of Human Interactions in a Simulated Environment</li></ul><h3 id="5f3c99b6-191a-43f7-b608-07f0af991718" class="">Center for Leadership and Diversity in STEM</h3><p id="70af964b-9c14-4abd-ab84-1efb8508ff8c" class=""><mark class="highlight-gray"><em><strong>United States Military Academy</strong></em></mark><mark class="highlight-gray"><em>, West Point – </em></mark><mark class="highlight-gray"><em><strong>June 2022</strong></em></mark></p><ul id="31108b10-33bc-413c-b760-bcb74271e2fe" class="bulleted-list"><li style="list-style-type:disc">Participated in many different STEM activities, including a math-themed race, robotics, video-game development, and electrical engineering</li></ul><ul id="10b61df2-f505-4c51-a441-6d5676572a09" class="bulleted-list"><li style="list-style-type:disc">Won award for winning the math-themed race (entire squad)</li></ul><ul id="d7d48f38-2412-4b7f-be78-58600ac84397" class="bulleted-list"><li style="list-style-type:disc">Won West Point STEM Ambassador, highest award for students at the camp (solo)</li></ul><h3 id="cb685e99-6a2f-4259-ad75-90800a99ff2f" class="">Inspirit AI Ambassador Program</h3><p id="098f3001-ffe4-4691-a595-10fb3becd443" class=""><mark class="highlight-gray"><em><strong>Inspirit AI</strong></em></mark><mark class="highlight-gray"><em> – </em></mark><mark class="highlight-gray"><em><strong>May 2021-Present</strong></em></mark></p><ul id="3ea3f272-989e-43a0-87fc-58bc61e430b2" class="bulleted-list"><li style="list-style-type:disc">Completed AI Scholars and AI Deep Dives program<ul id="f00ec34b-c18b-46fd-9298-05f5470bfeb4" class="bulleted-list"><li style="list-style-type:circle">Finished distracted driver detection for AI Scholars</li></ul><ul id="c4d1eebf-947c-43eb-afdd-2129610f5621" class="bulleted-list"><li style="list-style-type:circle">Finished skin cancer detection project for AI Deep Dives</li></ul></li></ul><ul id="77e0824e-9a8c-4b31-995f-02b6d7579129" class="bulleted-list"><li style="list-style-type:disc">Currently conducting scientific research using AI</li></ul><ul id="60a0ad71-633e-4111-91e7-e1cb8a9a27a8" class="bulleted-list"><li style="list-style-type:disc">Took part in the AI Ambassador program taught by MIT and Stanford graduates</li></ul><h3 id="7f0df39a-0729-46c3-8173-b23382512d12" class="">Students Working to Advance Technology</h3><p id="f2cd3c91-f18b-4772-8640-bbf82db7b382" class=""><mark class="highlight-gray"><em><strong>Rye Country Day School</strong></em></mark><mark class="highlight-gray"><em>, Rye – </em></mark><mark class="highlight-gray"><em><strong>2018-19</strong></em></mark></p><ul id="4d2284d2-ec91-4921-9c56-b4acf80fd8c7" class="bulleted-list"><li style="list-style-type:disc">A student-run after-school computer coding program for middle schoolers</li></ul><ul id="d38b6612-8522-4e82-a597-fe3cc82a4741" class="bulleted-list"><li style="list-style-type:disc">First joined as a middle schooler learning Python and will be teaching the program in the 2022-2023 school year</li></ul><hr id="8ff91faa-1bc8-4fdc-b2c6-f8062aa23e04"/><h2 id="65495f26-47c3-41b9-bfaf-7562983b0a36" class=""><mark class="highlight-blue">📚 Education</mark></h2><h3 id="16570128-36b8-4bb8-9804-4f38c707c155" class="">Rye Country Day School</h3><p id="fdc6a1e6-736c-4250-a12a-70309555da14" class="block-color-gray"><strong><em>Rye</em></strong><em>, New York – </em><strong><em>Class of 2025</em></strong></p><p id="672433a4-7215-4975-b175-ccb9eb7852e7" class=""><strong>GPA: </strong>3.97 unweighted, 5 (highest AP Exam score) on AP Computer Science A Exam</p><p id="45857649-ed59-4a8e-8ba1-3e0794b7dd6f" class=""><strong>All A’s</strong> in: AP Computer Science A, Honors Precalculus/Chemistry/Algebra II and Trigonometry/Geometry</p><p id="f5ed7869-4237-4d51-a22d-6d07040c1c19" class=""><strong>Upcoming Courses (2022-23 School Year):</strong> Advanced Topics I: Data Structures and Algorithms, AP Calculus BC/Physics I</p><p><strong>Clubs:</strong> (Software) Development Club, Rollback (Sports Video Filming Club), AAPI Club</p><p id="649290eb-bce6-4b68-a3b8-bf4c2f598c3e" class=""><strong>Volunteer Experience:</strong> Teaching Peers in the Upper and Middle School (Math, Science, Computer Science, and App and Web Development), Taught kids at <a href="https://building1community.org/">Building One Community</a></p><hr id="8ff91faa-1bc8-4fdc-b2c6-f8062aa23e04"/><h2 id="18a5e9df-8490-4f28-9a81-9d178165f49c" class=""><mark class="highlight-blue">🎶 Extracurricular Activities</mark></h2><h3 id="ca92eab2-6a92-48a1-b668-d9b1c074668a" class="">Varsity Tennis</h3><p id="cdda51dd-eb11-4875-9019-15a8dfba3646" class=""><mark class="highlight-gray"><strong><em>Rye Country Day School</em></strong></mark><mark class="highlight-gray"><em>, Rye – </em></mark><mark class="highlight-gray"><strong><em>2022 - Present</em></strong></mark></p><ul id="8c73ee33-bc95-4e2e-8456-677482ca6898" class="bulleted-list"><li style="list-style-type:disc">I was one of four freshmen selected for the team in 2022.</li></ul><h3 id="a51e2a50-1c66-4149-882d-ba2118b894ad" class="">1st Bb Clarinet Player</h3><p id="bbfa2377-094a-4c01-818b-e9cc74f370bb" class=""><strong><em><mark class="highlight-gray">Concert Band and Honors Jazz Ensemble</mark></em></strong><em><mark class="highlight-gray">, Rye Country Day School – 2019 - Present</mark></em></p><p id="f28fba0f-2fff-4f70-8289-e8f34cb67c47" class="">I play 1st Bb Clarinet in my school’s Concert Band and Honors Jazz Ensemble.</p><ul id="7dc3cec4-8d06-42b3-98f2-e44c5001dae5" class="bulleted-list"><li style="list-style-type:disc">Passed Level 6 for the 2022 NYSSMA Spring Festival Performance Evaluation and will be playing in the Area All-State starting Fall 2022</li></ul><hr id="894c3179-111f-4eab-8b82-da6f2c0bc047"/><h2 id="c7f12319-b6b5-47fc-9f8a-91ff8d87b853" class="">⚡<mark class="highlight-blue"> Skills</mark></h2><p id="36b7886a-9437-421f-be13-892f61a0c202" class=""><strong>💻 Programming:</strong> Python, Java, Swift, C++, C</p><p id="eaa2a00b-d93e-4350-aa77-3873d0766d3b" class=""><strong>🌐 Web Development:</strong> HTML, CSS, JS, Bootstrap, SQLite</p><p id="bd5ab5a2-0947-4376-b3f3-ab83a0ca2e2f" class=""><strong>📁 Data Analysis:</strong> Numpy, Matplotlib, Pandas, Scikit-Learn, Tensorflow, R</p><p id="ea2217fd-d87a-4035-8fe2-9776fdb85f02" class=""><strong>🗣 Foreign Languages: </strong>🇰🇷 Korean, 🇨🇳 Chinese</div></article></body></html>
